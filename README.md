@@ -198,6 +198,14 @@ nano inventory
 
 26. AWX envanter belgesinde aşağıda ki satırları bulup işlemlerini gerçekleştirelim:
 
-* **admin_user=admin**
+* Admin kullanıcı satırında bulunan "**admin**" kullanıcı adını bu hali ile kullanabilir veya istediğiniz bir kullanıcı adı belirtebilirsiniz.
+**admin_user=admin**
+
+* Admin kullanıcı parola satırının başında bulunan yorum sembolü'ünü (#) silerek, parola kullanımını etkinleştirip belirledyeceğimiz parolayı kullanabiliriz.
 * **admin_password=istediğiniz parola**
-* **secret_key=pwgen ile oluşturduğunuz anahtar**
+
+* Pwgen ile oluşturduğumuz parolamızı tanımlayalım.
+* **secret_key=(pwgen ile oluşturduğunuz anahtar**)
+
+Nano editörü'nde "Ctrl+o" ile kayıt ederiz, "Ctrl+x" ile de editör'den çıkarız.
+
