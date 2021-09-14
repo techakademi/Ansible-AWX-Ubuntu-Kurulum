@@ -92,3 +92,46 @@ logout
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+
+11. Docker Compose için okuma & yazma yetkisini verelim.
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+12. Ansible kurulumunu başlatalım.
+
+```
+sudo apt install ansible -y
+```
+
+13. Her nedense, paketler bir şekilde bozuluyor, apt paketlerini düzeltmek için --fix-missing operatörünü kullanarak düzeltme işlemini gerçekleştirelim.
+
+```
+sudo apt update --fix-missing
+```
+
+14. Node js & paket yöneticisi olan npm'i yükleme işlemini başlatalım.
+
+```
+sudo apt install nodejs npm -y
+```
+
+
+15. Npm'i global olarak yükleyelim.
+
+```
+sudo npm install npm --global -y
+```
+
+16. Python paket yöneticisi & rastgele paorla üreticisi olan pwgen'i yükleyelim.
+
+```
+sudo apt install python3-pip pwgen -y
+```
+
+17. Python paket yöneticisi & rastgele paorla üreticisi olan pwgen'i yükleyelim.
+
+```
+sudo apt install python3-pip pwgen -y
+```
