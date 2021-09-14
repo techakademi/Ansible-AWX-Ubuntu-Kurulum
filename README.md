@@ -174,14 +174,18 @@ cd awx-17.1.0/installer
 ```
 
 24. AWX'in kurulumuna başlamadan önce, AWX'in inventory'sinde bulunan erişim bilgilerinin şifrelenmesi için pwgen aracını kullanarak bir Secret_key oluşturacağız. Bu anahtarı oluşturduktan sonra, o nu bir yere kopyalamamız gerekir, daha sonra bu anahtarı inventory belgesi içerisinde kullanacağız.
+
 ------------------------------------------------------------------------------------------------------------------------------------------
+
 ##### pwgen komutu ile kullandığımız opsionlar:
 -N Opsiyonu, oluşturulmasını istediğimiz parola adetinin belirlendiği opsiyon'dur, Örneğin: -N 1, bir adet parola üretecektir, "bir" rakamı yerine ihtiyaç duyulan rakam belirtildiğinde o kadar parola üretecektir.
 
 -s Opsiyonu, oluşturulacak parolanın kaç karakter kullanılarak üretilmesini istediğimizi belirttiğimiz opsiyon'dur.
 
-[Daha Fazla Bilgi için:](https://linux.die.net/man/1/pwgen)
+Daha Fazla Bilgi için: [Pwgen yardım sayfası](https://linux.die.net/man/1/pwgen)
+
 ------------------------------------------------------------------------------------------------------------------------------------------
+
 ```
 pwgen -N 1 -s 30
 ```
