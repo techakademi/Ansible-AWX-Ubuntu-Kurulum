@@ -80,3 +80,15 @@ sudo docker run hello-world
 ```
 sudo usermod -aG docker $USER
 ```
+
+9. Docker grubuna eklenen kullanıcının etkin olması için sistemden logout olup tekrar login olalım.
+
+```
+logout
+```
+
+10. Docker Compose kurulumu için aşağıda ki komutu kopyalayıp yapıştıralım.
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
