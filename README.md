@@ -198,6 +198,6 @@ nano inventory
 
 26. AWX envanter belgesinde aşağıda ki satırları bulup işlemlerini gerçekleştirelim:
 
-**admin_user=admin**
-**admin_password=istediğiniz parola**
-**secret_key=pwgen ile oluşturduğunuz anahtar**
+* **admin_user=admin**
+* **admin_password=istediğiniz parola**
+* **secret_key=pwgen ile oluşturduğunuz anahtar**
