@@ -1,4 +1,8 @@
-# Ansible-AWX-Kurulum
+# AWX Projesi:
+
+### Red Hat tarafından desteklenen ve kullanıcıların BT ortamlarında Ansible proje kullanımlarını daha iyi kontrol etmelerini sağlayan, açık kaynaklı bir web tabanlı kullanıcı arabirimi olan topluluk projesidir.
+
+## Ansible-AWX-Kurulum
 Ansible AWX 17.1.0 sürümünü, Ubuntu 20.04.3 LTS sunucusuna kurulum talimatıdır.
 
 Bu talimat'da bulunan yönergeler, eğitim ve geliştirme ortamları için uygundur.
@@ -70,7 +74,9 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 sudo docker run hello-world
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------
-`docker run` komutunun ekran çıktısı aşağıda ki gibi ise Docker sorunsuz çalışıyor demektir:
+
+`sudo docker run hello-world` komutunun ekran çıktısı aşağıda ki gibi ise Docker sorunsuz çalışıyor demektir:
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 ![docker_hello_world](https://user-images.githubusercontent.com/66215655/133246335-c61d010c-ab27-449a-8799-364e88e3db16.png)
 ------------------------------------------------------------------------------------------------------------------------------------------
