@@ -241,9 +241,11 @@ adefbc5aea4c   ansible/awx:17.1.0   "/usr/bin/tini -- /u…"   28 minutes ago   
 2c0bc4eeff6b   postgres:12          "docker-entrypoint.s…"   32 minutes ago   Up 28 minutes   5432/tcp                                awx_postgres
 ```
 
-30. AWX docker containeri awx_web ismi ile, 80 numaralı port'u kullanarak çalışıyor. Yüklemesini gerçekleştirdiğiniz sunucunun ip adresini kullandığınız herhangi bir browserın adres alanına yazarak AWX'in ara yüzüne erişebilirsiniz.
-http://x.x.x.x
+30. AWX Docker container'i awx_web ismi ile, 80 numaralı port'u kullanarak çalışıyor. Yüklemesini gerçekleştirdiğiniz sunucunun ip adresini kullandığınız herhangi bir browserın adres alanına yazarak AWX'in ara yüzüne erişebilirsiniz.
+
+* http://x.x.x.x
 
 ![AWX_Login](https://user-images.githubusercontent.com/66215655/133275011-2501543e-fe37-4de8-8b44-f1ad1ddb5560.png)
 
 ![AWX_Dashboard](https://user-images.githubusercontent.com/66215655/133275044-7729230f-d025-465f-a58a-38aec65751d6.png)
+
