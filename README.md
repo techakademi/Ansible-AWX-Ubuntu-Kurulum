@@ -130,8 +130,56 @@ sudo npm install npm --global -y
 sudo apt install python3-pip pwgen -y
 ```
 
-17. Python paket yöneticisi & rastgele paorla üreticisi olan pwgen'i yükleyelim.
+17. Python requests kütüphanesini yükleyelim.
 
 ```
-sudo apt install python3-pip pwgen -y
+sudo pip3 install requests
+```
+
+18. Python Docker Compose modülünü yükleyelim.
+
+```
+sudo pip3 install docker-compose==1.29.2
+```
+
+19. AWX'in github'dan zip'li halini indireceğimiz için, unzip programına ihtiyacımız var, unzip programın yüklemesini gerçekleştirelim.
+
+```
+sudo apt install unzip -y
+```
+
+20. Wget ile, Ansible AWX'in github'dan 17.1.0 sürümünü indirelim.
+
+```
+wget https://github.com/ansible/awx/archive/17.1.0.zip
+```
+
+21. İndirdiğimiz zip paketini unzip edelim.
+
+```
+unzip 17.1.0.zip
+```
+
+22. AWX'in kurulum klasörüne gidelim.
+
+```
+cd awx-17.1.0/installer
+```
+
+
+23. AWX'in kurulum klasörüne gidelim.
+
+```
+cd awx-17.1.0/installer
+```
+
+24. AWX'in kurulumuna başlamadan önce, AWX'in inventory'sinde bulunan erişim bilgilerinin şifrelenmesi için pwgen aracını kullanarak bir Secret_key oluşturacağız. Bu anahtarı oluşturduktan sonra, o nu bir yere kopyalamamız gerekir, daha sonra bu anahtarı inventory belgesi içerisinde kullanacağız.
+##### pwgen komutu ile kullandığımız opsionlar:
+-N Opsiyonu, oluşturulmasını istediğimiz parola adetinin belirlendiği opsiyon'dur, Örneğin: -N 1, bir adet parola üretecektir, "bir" rakamı yerine ihtiyaç duyulan rakam belirtildiğinde o kadar parola üretecektir.
+
+-s Opsiyonu, oluşturulacak parolanın kaç karakter kullanılarak üretilmesini istediğimizi belirttiğimiz opsiyon'dur.
+[Daha Fazla Bilgi için:](https://linux.die.net/man/1/pwgen)
+
+```
+pwgen -N 1 -s 30
 ```
