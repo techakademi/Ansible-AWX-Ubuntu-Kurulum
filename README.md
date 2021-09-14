@@ -190,4 +190,14 @@ Daha Fazla Bilgi için: [Pwgen yardım sayfası](https://linux.die.net/man/1/pwg
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
+25. AWX envanter belgesi içerisinde admin kullanıcısı, parolası ve bir önce ki adımda oluşturduğumuz anahtarı eklemek için nano veya vi editörlerini kullanarak değişiklikleri uygulayacağız.
 
+```
+nano inventory
+```
+
+26. AWX envanter belgesinde aşağıda ki satırları bulup işlemlerini gerçekleştirelim:
+
+**admin_user=admin**
+**admin_password=istediğiniz parola**
+**secret_key=pwgen ile oluşturduğunuz anahtar**
