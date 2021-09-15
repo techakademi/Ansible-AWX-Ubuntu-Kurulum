@@ -172,14 +172,7 @@ unzip 17.1.0.zip
 cd awx-17.1.0/installer
 ```
 
-
-23. AWX'in kurulum klasörüne gidelim.
-
-```
-cd awx-17.1.0/installer
-```
-
-24. AWX'in kurulumuna başlamadan önce, AWX'in inventory'sinde bulunan erişim bilgilerinin şifrelenmesi için pwgen aracını kullanarak bir Secret_key oluşturacağız. Bu anahtarı oluşturduktan sonra, o nu bir yere kopyalamamız gerekir, daha sonra bu anahtarı inventory belgesi içerisinde kullanacağız.
+23. AWX'in kurulumuna başlamadan önce, AWX'in inventory'sinde bulunan erişim bilgilerinin şifrelenmesi için pwgen aracını kullanarak bir Secret_key oluşturacağız. Bu anahtarı oluşturduktan sonra, o nu bir yere kopyalamamız gerekir, daha sonra bu anahtarı inventory belgesi içerisinde kullanacağız.
 
 ```
 pwgen -N 1 -s 30
@@ -196,13 +189,13 @@ Daha Fazla Bilgi için: [Pwgen yardım sayfası](https://linux.die.net/man/1/pwg
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-25. AWX envanter belgesi içerisinde admin kullanıcısı, parolası ve bir önce ki adımda oluşturduğumuz anahtarı eklemek için nano veya vi editörlerini kullanarak değişiklikleri uygulayacağız.
+24. AWX envanter belgesi içerisinde admin kullanıcısı, parolası ve bir önce ki adımda oluşturduğumuz anahtarı eklemek için nano veya vi editörlerini kullanarak değişiklikleri uygulayacağız.
 
 ```
 nano inventory
 ```
 
-26. AWX envanter belgesinde aşağıda ki satırları bulup işlemlerini gerçekleştirelim:
+25. AWX envanter belgesinde aşağıda ki satırları bulup işlemlerini gerçekleştirelim:
 
 * Admin kullanıcı satırında bulunan "**admin**" kullanıcı adını bu hali ile kullanabilir veya istediğiniz bir kullanıcı adı belirtebilirsiniz.
 
@@ -218,14 +211,13 @@ nano inventory
 
 Nano editörü'nde "Ctrl+o" ile kayıt ederiz, "Ctrl+x" ile de editör'den çıkarız.
 
-
-27. AWX envanter belgesinin düzenlemesinin tamamlanamsından sonra, AWX kurulum playbook'unu çalıştırabiliriz. Bu aşamada, ansible ihtiyaç duyrduğu konteynerleri çalıştırmak için biraz zamana ihtiyaç duyabilir, sonuna kadar beklemenmesi gerekir.
+26. AWX envanter belgesinin düzenlemesinin tamamlanamsından sonra, AWX kurulum playbook'unu çalıştırabiliriz. Bu aşamada, ansible ihtiyaç duyrduğu konteynerleri çalıştırmak için biraz zamana ihtiyaç duyabilir, sonuna kadar beklemenmesi gerekir.
 
 ```
 ansible-playbook -i inventory install.yml
 ```
 
-28. Kurulumun tamamlanmasının ardından, `docker run` komutunu kullanarak AWX'in container'leri çalıştırdığını teyit edelim.
+27. Kurulumun tamamlanmasının ardından, `docker run` komutunu kullanarak AWX'in container'leri çalıştırdığını teyit edelim.
 
 ```
 ansible-playbook -i inventory install.yml
@@ -235,7 +227,7 @@ ansible-playbook -i inventory install.yml
 ![Kurulum Sonu](https://user-images.githubusercontent.com/66215655/133272355-ddd4fbee-25fc-4db3-a7db-6ae8c0ca6c56.png)
 
 
-29. AWX docker containerlerini kontrol ettiğimizde de tamamının çalıştığını ayrıca teyit edebiliriz.
+28. AWX docker containerlerini kontrol ettiğimizde de tamamının çalıştığını ayrıca teyit edebiliriz.
 
 ```text
 [theadmin@AnsibleAWX:/$] docker ps
@@ -247,11 +239,10 @@ adefbc5aea4c   ansible/awx:17.1.0   "/usr/bin/tini -- /u…"   28 minutes ago   
 2c0bc4eeff6b   postgres:12          "docker-entrypoint.s…"   32 minutes ago   Up 28 minutes   5432/tcp                                awx_postgres
 ```
 
-30. AWX Docker container'i awx_web ismi ile, 80 numaralı port'u kullanarak çalışıyor. Yüklemesini gerçekleştirdiğiniz sunucunun ip adresini kullandığınız herhangi bir browserın adres alanına yazarak AWX'in ara yüzüne erişebilirsiniz.
+29. AWX Docker container'i awx_web ismi ile, 80 numaralı port'u kullanarak çalışıyor. Yüklemesini gerçekleştirdiğiniz sunucunun ip adresini kullandığınız herhangi bir browserın adres alanına yazarak AWX'in ara yüzüne erişebilirsiniz.
 
 * http://x.x.x.x
 
 ![AWX_Login](https://user-images.githubusercontent.com/66215655/133275011-2501543e-fe37-4de8-8b44-f1ad1ddb5560.png)
 
 ![AWX_Dashboard](https://user-images.githubusercontent.com/66215655/133275044-7729230f-d025-465f-a58a-38aec65751d6.png)
-
