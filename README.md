@@ -217,15 +217,8 @@ Nano editörü'nde "Ctrl+o" ile kayıt ederiz, "Ctrl+x" ile de editör'den çık
 ansible-playbook -i inventory install.yml
 ```
 
-27. Kurulumun tamamlanmasının ardından, `docker run` komutunu kullanarak AWX'in container'leri çalıştırdığını teyit edelim.
-
-```
-ansible-playbook -i inventory install.yml
-```
-
-###### Kurulum, Başarılı bir şekilde tamamlanması halinde, playbook'un son satırında görevlerin başarılı bir şekilde tamamlandığını görebilriz.
+27. Kurulum, Başarılı bir şekilde tamamlanması halinde, playbook'un son satırında görevlerin başarılı bir şekilde tamamlandığını görebilriz.
 ![Kurulum Sonu](https://user-images.githubusercontent.com/66215655/133272355-ddd4fbee-25fc-4db3-a7db-6ae8c0ca6c56.png)
-
 
 28. AWX docker containerlerini kontrol ettiğimizde de tamamının çalıştığını ayrıca teyit edebiliriz.
 
