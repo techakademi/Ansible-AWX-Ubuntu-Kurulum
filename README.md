@@ -31,10 +31,10 @@ Detaylı bilgi için: [ Ansible Github](https://github.com/ansible/awx/blob/17.0
 ## Kurulum Adımları:
 1. Adım Kurulum yapılacak Suncunun güncelleme işlemi ile başlaycağız.
 ```
-sudo apt update
+sudo apt -y update
 ```
 ```
-sudo apt upgrade -y
+sudo apt -y upgrade
 ```
 
 2. Apt'nin HTTPS üzerinden repository'yi kullanmasına izin vermek için gerekli paketlerin kurulumunu gerçekleştirelim.
